@@ -1,10 +1,25 @@
 import React from "react";
+import TextField from "@material-ui/core/TextField";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(1),
+      width: "25ch"
+    }
+  }
+}));
 
 function Topsection() {
+  const classes = useStyles();
   return (
     <div class="curved">
       <h1>Welcome to weather app</h1>
-      <p>Predict weather</p>
+      <p>Find weather</p>
+      <form >
+      <input type="text"></input>
+        </form>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"

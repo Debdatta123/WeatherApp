@@ -1,16 +1,17 @@
-.Topsection {
-  /* width: 100vh; */
-  /* height: 100vh; */
+body {
+  width: 100%;
+  height: 100%;
+  text-align: center;
   margin: 0;
   padding: 0;
+}
+.Topsection {
   overflow: hidden;
 }
 .curved {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 30rem;
-  background-image: url("w.jpg");
+  background-image: url("w2.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -21,9 +22,13 @@
 }
 .curved h1 {
   margin-top: 0;
+  position: relative;
+  top: 7rem;
 }
 .curved p {
   margin: 0 5rem 0 5rem;
+  position: relative;
+  top: 7rem;
 }
 .curved svg {
   display: block;
@@ -31,3 +36,19 @@
   bottom: 0;
   left: 0;
 }
+.curved form input {
+  width: 20%;
+  /* padding: 12px 20px; */
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid white;
+  position: relative;
+  top: 10rem;
+  background: transparent;
+}
+/* .MuiInputBase-input {
+  height: 10rem;
+  position: relative;
+  top: 100px;
+} */
