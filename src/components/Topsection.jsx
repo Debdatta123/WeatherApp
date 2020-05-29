@@ -14,12 +14,14 @@ import React from "react";
 function Topsection() {
   // const classes = useStyles();
   return (
-    <div className="curved">
-      <h1>Welcome to weather app</h1>
-      <p>Find weather</p>
+    <div className="curved">      
+      <h1>Welcome to weather app</h1>      
+      <p>Find weather</p>    
       <form >
-      <input type="text"></input>
-        </form>
+      <input className="i1" type="text" placeholder="Enter City"></input><br />
+      <button className="i2" type="submit" >get weather</button>
+        </form>      
+        <a className="b1" href="#">Weather News</a> 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"

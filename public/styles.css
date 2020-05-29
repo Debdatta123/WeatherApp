@@ -7,10 +7,12 @@ body {
 }
 .Topsection {
   overflow: hidden;
+
 }
 .curved {
+
   width: 100%;
-  height: 34rem;
+  height: 36rem;
   background-image: url("w2.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -21,14 +23,17 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 .curved h1 {
+float:center;
   margin-top: 0;
   position: relative;
-  top: 7rem;
+  top: 6rem;
+font-size: 38px;
 }
 .curved p {
   margin: 0 5rem 0 5rem;
   position: relative;
-  top: 7rem;
+  top: 6.5rem;
+  font-size: 18px;
 }
 .curved svg {
   display: block;
@@ -36,19 +41,88 @@ body {
   bottom: 0;
   left: 0;
 }
-.curved form input {
+.curved form{
+  text-align: center;
+}
+.curved form .i1 {
+  font-size:15px;
+   color:white;
   width: 20rem;
-  /* padding: 12px 20px; */
+  padding: 10px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
+  outline:0;
   border-bottom: 2px solid white;
   position: relative;
   top: 10rem;
+  right:6rem;
   background: transparent;
+   background: url(city1.png) no-repeat scroll 7px 7px;
+  padding-left:30px; 
+background-size: 25px;
+text-align: center;
 }
-/* .MuiInputBase-input {
-  height: 10rem;
-  position: relative;
-  top: 100px;
-} */
+::placeholder{
+  color:white;
+  font-family: "Varela Round", sans-serif;
+  font-size:15px;
+  opacity: 50%;
+  }
+  
+  [placeholder]:focus::-webkit-input-placeholder {    
+    opacity: 0;
+  }
+    .b1{      
+      font-family:  verdana;
+      display:inline-block;
+      width:220px;
+      height:55px;
+      line-height: 55px;
+      font-size: 17px;
+      letter-spacing:1px;
+      color:white;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      background-image: linear-gradient(-45deg,rgb(17, 147, 207),#00ffea,rgb(17, 147, 207));
+      border-radius: 45px 0 45px 0;
+      transition: all ease 0.7s;
+      background-size: 400% 400%;
+      background-position: 0 0;
+      float: right;
+      position: relative;
+      bottom:11rem;
+      right:2rem;
+    }
+    .b1:hover{
+      border-radius: 0 45px 0 45px;
+      background-position: 100% 50%;
+    }
+    .i2{      
+      font-family:  verdana;
+      display:inline-block;
+      width:190px;
+      height:55px;
+      line-height: 55px;
+      font-size: 17px;
+      letter-spacing:1px;
+      color:white;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      background-image: linear-gradient(-45deg,rgb(162, 11, 207),#f712d8,rgb(162, 11, 207));
+      border-radius: 45px 0 45px 0;
+      transition: all ease 0.7s;
+      background-size: 400% 400%;
+      background-position: 0 0;
+      border: none;
+      position: relative;
+      top:6rem;
+      left:11.5rem;
+    }
+    .i2:hover{
+      border-radius: 0 45px 0 45px;
+      background-position: 100% 50%;
+    }
+    
