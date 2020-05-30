@@ -98,6 +98,8 @@ text-align: center;
     .b1:hover{
       border-radius: 0 45px 0 45px;
       background-position: 100% 50%;
+      text-decoration: none;
+      color:white;
     }
     .i2{      
       font-family:   "Varela Round", sans-serif;
@@ -111,10 +113,10 @@ text-align: center;
       text-transform: uppercase;
       text-decoration: none;
       text-align: center;
-      background-image: linear-gradient(-45deg,rgb(162, 11, 207),#f712d8,rgb(162, 11, 207));
+      background-image: linear-gradient(-45deg,rgb(162, 11, 207),#ff00dd,rgb(162, 11, 207));
       border-radius: 45px 0 45px 0;
-      transition: all ease 0.7s;
-      background-size: 400% 400%;
+      transition: all ease 0.5s;
+      background-size: 200% 200%;
       background-position: 0 0;
       border: none;
       position: relative;
@@ -125,4 +127,49 @@ text-align: center;
       border-radius: 0 45px 0 45px;
       background-position: 100% 50%;
     }
+
+    .jb{
+      background: url(w1.gif);
+      width:90%;
+      position: relative;
+      left:5%;
+      overflow: hidden;
+      margin: 0;
+      margin-bottom: 3rem;
+      padding:0;
+      font-family: "Varela Round", sans-serif;
+      border-radius: 25px;
+    }
+
+    .para{
+      font-size: 20px ;
+      position: relative;
+      bottom: 1rem;
+    }
+
+   table {
+     width:50% !important;
+      margin: auto;
+     
+   }
+   table td{
+     color: white;
+     font-size: 17px ;
+   }
+   table.table-bordered{
+    border:2px solid white;
+  
+    
+  }
+
+table.table-bordered > tbody > tr > td{
+    border:2px solid white;
+}
+   
+
+
+
+
+   
+   
     
