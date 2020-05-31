@@ -11,14 +11,15 @@ import React from "react";
 //   }
 // }));
 
-function Topsection() {
+function Topsection(props) {
   // const classes = useStyles();
   return (
     <div className="curved">      
       <h1>Welcome to weather app</h1>      
-      <p>Find weather</p>    
-      <form >
-      <input className="i1" type="text" placeholder="Enter City"></input><br />
+      <p>Find weather</p>  
+    <div>{props.error? error():null}</div>  
+      <form onSubmit={props.loadweather}>
+      <input className="i1" type="text" placeholder="Enter City" name="city" autoComplete="off"></input><br />
       <button className="i2" type="submit" >get weather</button>
         </form>      
         <a className="b1" href="#">Weather News</a> 
@@ -35,6 +36,14 @@ function Topsection() {
       </svg>
     </div>
    
+  );
+}
+
+function error(){
+  return(
+<div className="alert alert-danger mx-5" role="alert">
+  Please Enter City Correctly !!!
+</div>
   );
 }
 
