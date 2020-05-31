@@ -3,7 +3,7 @@ import Topsection from "./Topsection";
 import Midsection from "./Midsection";
 import moment from 'moment-timezone';
 
-const API_key="70f846b34231239ba4dd4fc5f0e0fe8d"
+const API_key=""
 
 class App extends React.Component{
 constructor(){
