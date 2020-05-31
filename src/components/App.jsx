@@ -1,6 +1,9 @@
 import React from "react";
 import Topsection from "./Topsection";
 import Midsection from "./Midsection";
+// import * as moment from 'Moment'
+
+const API_key="70f846b34231239ba4dd4fc5f0e0fe8d"
 
 class App extends React.Component{
 constructor(){
@@ -30,14 +33,15 @@ calCelsius(temp){
 }
 
 calhrmin(n){
+  
         let day = n / (24 * 3600);       
         n = n % (24 * 3600); 
         let hour = n / 3600; 
-        hour+=5;      
+        // hour+=5;      
         n %= 3600; 
         let minutes = n / 60 ;       
         n %= 60;
-        minutes+=30; 
+        // minutes+=30; 
         let seconds = n; 
         if(hour<10)
         return("0"+ hour.toString().split(".")[0] + ":"  + minutes.toString().split(".")[0] + ":" + seconds.toString()); 
@@ -50,6 +54,12 @@ calhrmin(n){
         
 }
 
+// calhrmin1(n){
+//   var utc = n;
+//   var m = moment.unix(utc).tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss');
+//   return(m)
+// }
+
 capital(string){
    return(string[0].toUpperCase() + string.slice(1)); 
   
@@ -58,9 +68,10 @@ capital(string){
 getWeather=async (e) =>{
   e.preventDefault();
   const city=e.target.elements.city.value;
+  // console.log(city);
   // const country='in';
   if(city){
-  const api_call=await fetch("http://api.openweathermap.org/data/2.5/weather?q=mumbai,in&appid=api_key");
+  const api_call=await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},in&appid=${API_key}`);
   const response=await api_call.json();
   console.log(response);
   this.setState({
