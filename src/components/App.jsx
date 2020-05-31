@@ -2,14 +2,12 @@ import React from "react";
 import Topsection from "./Topsection";
 import Midsection from "./Midsection";
 
-
-const API_key="9af22302fcc9e61a4f1b320749b26244"
 class App extends React.Component{
 constructor(){
   super();
   this.state={
     city:undefined,
-    country:undefined,
+    // country:undefined,
     main:undefined,
     celsius:undefined,
     temp_max:undefined,
@@ -34,10 +32,12 @@ calCelsius(temp){
 calhrmin(n){
         let day = n / (24 * 3600);       
         n = n % (24 * 3600); 
-        let hour = n / 3600;       
+        let hour = n / 3600; 
+        hour+=5;      
         n %= 3600; 
         let minutes = n / 60 ;       
-        n %= 60; 
+        n %= 60;
+        minutes+=30; 
         let seconds = n; 
         if(hour<10)
         return("0"+ hour.toString().split(".")[0] + ":"  + minutes.toString().split(".")[0] + ":" + seconds.toString()); 
@@ -60,12 +60,12 @@ getWeather=async (e) =>{
   const city=e.target.elements.city.value;
   // const country='in';
   if(city){
-  const api_call=await fetch("http://samples.openweathermap.org/data/2.5/weather?q=$(city),in&appid=70f846b34231239ba4dd4fc5f0e0fe8d");
+  const api_call=await fetch("http://api.openweathermap.org/data/2.5/weather?q=mumbai,in&appid=api_key");
   const response=await api_call.json();
   console.log(response);
   this.setState({
     city:response.name,
-    country:response.sys.country,
+    // country:response.sys.country,
     celsius: this.calCelsius(response.main.temp),
     temp_max:this.calCelsius(response.main.temp_max),
     temp_min:this.calCelsius(response.main.temp_min),
@@ -92,7 +92,7 @@ return(
   />
   <Midsection 
     city={this.state.city}
-    country={this.state.country} 
+    // country={this.state.country} 
     temp_celsius={this.state.celsius}
     temp_max={this.state.temp_max}
     temp_min={this.state.temp_min}

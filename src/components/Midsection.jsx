@@ -6,7 +6,7 @@ function Midsection(props) {
 <div className="jumbotron card card-image jb">
 <div className="text-white text-center py-5 px-4">
   <div>
-    <h2 className="card-title h1-responsive pt-3 mb-5 font-bold"><strong>{props.city} , {props.country}</strong></h2>
+    <h2 className="card-title h1-responsive pt-3 mb-5 font-bold"><strong>{props.city} , India</strong></h2>
     <p className="para">{props.temp_celsius} &deg;C , {props.description}</p>
     
     <table className="table table-bordered">
