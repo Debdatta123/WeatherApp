@@ -1,7 +1,7 @@
 import React from "react";
 import Topsection from "./Topsection";
 import Midsection from "./Midsection";
-// import * as moment from 'Moment'
+import moment from 'moment-timezone';
 
 const API_key="70f846b34231239ba4dd4fc5f0e0fe8d"
 
@@ -32,33 +32,12 @@ calCelsius(temp){
   return c;
 }
 
-calhrmin(n){
-  
-        let day = n / (24 * 3600);       
-        n = n % (24 * 3600); 
-        let hour = n / 3600; 
-        // hour+=5;      
-        n %= 3600; 
-        let minutes = n / 60 ;       
-        n %= 60;
-        // minutes+=30; 
-        let seconds = n; 
-        if(hour<10)
-        return("0"+ hour.toString().split(".")[0] + ":"  + minutes.toString().split(".")[0] + ":" + seconds.toString()); 
-        else if(minutes<10)
-        return( hour.toString().split(".")[0] + ":0"  + minutes.toString().split(".")[0] + ":" + seconds.toString()); 
-        else if(seconds<10)
-        return( hour.toString().split(".")[0] + ":"  + minutes.toString().split(".")[0] + ":0" + seconds.toString()); 
-        else
-        return(hour.toString().split(".")[0] + ":"  + minutes.toString().split(".")[0] + ":" + seconds.toString()); 
-        
-}
 
-// calhrmin1(n){
-//   var utc = n;
-//   var m = moment.unix(utc).tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss');
-//   return(m)
-// }
+calhrmin1(n){
+  var utc = n;
+  var m = moment.unix(utc).tz('Asia/Kolkata').format(' HH:mm:ss');
+  return(m);
+}
 
 capital(string){
    return(string[0].toUpperCase() + string.slice(1)); 
@@ -82,8 +61,8 @@ getWeather=async (e) =>{
     temp_min:this.calCelsius(response.main.temp_min),
     pressure:response.main.pressure,
     humidity:response.main.humidity,
-    sunrise:this.calhrmin(response.sys.sunrise),
-    sunset:this.calhrmin(response.sys.sunset),
+    sunrise:this.calhrmin1(response.sys.sunrise),
+    sunset:this.calhrmin1(response.sys.sunset),
     speed:response.wind.speed,
     cloud:response.clouds.all,
     description:this.capital(response.weather[0].description)
