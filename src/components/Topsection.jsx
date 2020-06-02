@@ -16,7 +16,7 @@ function Topsection(props) {
   return (
     <div className="curved">      
       <h1>Welcome to weather app</h1>      
-      <p>Find weather</p>  
+      <p>Find weather of any city in India</p>  
     <div>{props.error? error():null}</div>  
       <form onSubmit={props.loadweather}>
       <input className="i1" type="text" placeholder="Enter City" name="city" autoComplete="off"></input><br />

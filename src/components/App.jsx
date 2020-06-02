@@ -1,6 +1,7 @@
 import React from "react";
 import Topsection from "./Topsection";
 import Midsection from "./Midsection";
+import Bottomsection from "./Bottomsection";
 import moment from 'moment-timezone';
 
 const API_key="70f846b34231239ba4dd4fc5f0e0fe8d"
@@ -35,7 +36,7 @@ calCelsius(temp){
 
 calhrmin1(n){
   var utc = n;
-  var m = moment.unix(utc).tz('Asia/Kolkata').format(' HH:mm:ss');
+  var m = moment.unix(utc).tz('Asia/Kolkata').format('HH:mm:ss');
   return(m);
 }
 
@@ -94,7 +95,9 @@ return(
     speed={this.state.speed}
     cloud={this.state.cloud}
    />
+   <Bottomsection />
 </div>
+
 );
 }
 }

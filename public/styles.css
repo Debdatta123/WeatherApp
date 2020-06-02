@@ -10,7 +10,6 @@ body {
 
 }
 .curved {
-
   width: 100%;
   height: 36rem;
   background-image: url("w2.svg");
@@ -102,7 +101,7 @@ text-align: center;
       color:white;
     }
     .i2{      
-      font-family:   "Varela Round", sans-serif;
+      font-family:"Varela Round", sans-serif;
       display:inline-block;
       width:190px;
       height:55px;
@@ -129,7 +128,7 @@ text-align: center;
     }
 
     .jb{
-      background: url(w3.gif);
+      background: url(w6.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -174,6 +173,34 @@ button:focus {
   box-shadow: none;
 }
    
+
+.container {
+   margin: auto;
+   font-family:  "Varela Round", sans-serif;
+}
+
+.card1{
+  background: url(w3.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: white;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 20px;
+}
+
+.card-text{
+  font-size: 17px;
+  
+}
+
+.image1{
+height: 5rem;
+width: 5rem;
+margin-bottom: 1rem;
+
+}
 
 
 
