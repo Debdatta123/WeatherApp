@@ -4,7 +4,7 @@ import Midsection from "./Midsection";
 import Bottomsection from "./Bottomsection";
 import moment from 'moment-timezone';
 
-const API_key="70f846b34231239ba4dd4fc5f0e0fe8d"
+const API_key=""
 
 class App extends React.Component{
 constructor(){
