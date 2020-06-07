@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function Topsection(props) {
   return (
     <div className="curved">      
@@ -9,7 +10,7 @@ function Topsection(props) {
       <input className="i1" type="text" placeholder="Enter City" name="city" autoComplete="off" required></input><br />
       <button className="i2" type="submit" >get weather</button>
         </form>      
-        <a className="b1" href="#">weather news</a> 
+        <Link to="/news"><a className="b1" href="#">weather news</a></Link>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
