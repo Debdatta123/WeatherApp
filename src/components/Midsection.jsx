@@ -2,13 +2,15 @@ import React from "react";
 
 
 function Midsection(props) {
+  const imgURL = `owf owf-${props.icon} owf-4x`;
     return(
 <div className="jumbotron card card-image jb">
 <div className="text-white text-center py-5 px-4">
   <div>
     <h2 className="card-title h1-responsive pt-3 mb-5 font-bold"><strong>{props.city} , India</strong></h2>
-    <p className="para">{props.temp_celsius} &deg;C , {props.description}</p>
-    
+    <p className="para para1">{props.temp_celsius} &deg;C , {props.description}</p>
+    <i className={imgURL}></i>
+    <p className="para">{props.dt}</p>    
     <table className="table table-bordered">
   <tbody>
     <tr>      

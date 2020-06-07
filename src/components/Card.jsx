@@ -1,62 +1,19 @@
 import React from "react";
+var moment = require('moment');
 
-function Card(){
-    return(
-
-        <div className="container">
-        <div className="row justify-content-center">    
-    <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="card card1">
-      <div class="card-body">
-        <h5 class="card-title">2 June 2020</h5>
-        <h6 class="card-text">23 ^C</h6>
-        <img className="image1" src="w1.gif"/>
-        <h6 class="card-text">Light Intensity Rain</h6>
+function Card(props){
+  const imgURL = `owf owf-${props.icon1} owf-5x`;
+    return(  
+    <div className="col-lg-4 col-md-6 col-sm-12">
+    <div className="card card1">
+      <div className="card-body">
+        <h5 className="card-title">{props.dt}</h5>
+        <h6 className="card-text">{props.celsius1} &deg;C</h6>
+        <i className={imgURL}></i>
+        <h6 className="card-text">{props.description1}</h6>
       </div>
     </div>
   </div>
-  <div class="col-lg-4 col-md-6 col-sm-12 ">
-    <div class="card card1">
-      <div class="card-body">
-        <h5 class="card-title">2 June 2020</h5>
-        <h6 class="card-text">23 ^C</h6>
-        <img className="image1" src="w1.gif"/>
-        <h6 class="card-text">Light Intensity Rain</h6>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="card card1">
-      <div class="card-body">
-        <h5 class="card-title">2 June 2020</h5>
-        <h6 class="card-text">23 ^C</h6>
-        <img className="image1" src="w1.gif"/>
-        <h6 class="card-text">Light Intensity Rain</h6>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="card card1">
-      <div class="card-body">
-        <h5 class="card-title">2 June 2020</h5>
-        <h6 class="card-text">23 ^C</h6>
-        <img className="image1" src="w1.gif"/>
-        <h6 class="card-text">Light Intensity Rain</h6>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="card card1">
-      <div class="card-body">
-        <h5 class="card-title">2 June 2020</h5>
-        <h6 class="card-text">23 ^C</h6>
-        <img className="image1" src="w1.gif"/>
-        <h6 class="card-text">Light Intensity Rain</h6>
-      </div>
-    </div>
-  </div>
-    </div>
-    </div>
 
     );
 }

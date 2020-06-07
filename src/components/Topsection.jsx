@@ -1,28 +1,15 @@
 import React from "react";
-// import TextField from "@material-ui/core/TextField";
-// import { makeStyles } from "@material-ui/core/styles";
-
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     "& > *": {
-//       margin: theme.spacing(1),
-//       width: "25ch"
-//     }
-//   }
-// }));
-
 function Topsection(props) {
-  // const classes = useStyles();
   return (
     <div className="curved">      
       <h1>Welcome to weather app</h1>      
       <p>Find weather of any city in India</p>  
     <div>{props.error? error():null}</div>  
       <form onSubmit={props.loadweather}>
-      <input className="i1" type="text" placeholder="Enter City" name="city" autoComplete="off"></input><br />
+      <input className="i1" type="text" placeholder="Enter City" name="city" autoComplete="off" required></input><br />
       <button className="i2" type="submit" >get weather</button>
         </form>      
-        <a className="b1" href="#">Weather News</a> 
+        <a className="b1" href="#">weather news</a> 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
