@@ -8,30 +8,41 @@ class News extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            title:""
-
-        }
+        title:undefined
+        };
     }
-    getNews(){
-    const getNew = async () => {
-
-        const news1 = await fetch('http://newsapi.org/v2/everything?qInTitle=rain&sources=the-hindu,the-times-of-india,google-news-in&sortBy=publishedAt&apiKey=3b7021b74bfe474dac3f7a4786491e9b');
-        const news = await news1.json()
-        console.log(news);
-        function setStateFunction(state, props) {
-            const newState = {title:news};
-            return newState;
-          }
-          this.setState(setStateFunction);
-    };
-    getNew();
+//     getNews(){
+//     const getNew = async () => {
+//         const news1 = await fetch('http://newsapi.org/v2/everything?qInTitle=rain&sources=the-hindu,the-times-of-india,google-news-in&sortBy=publishedAt&apiKey=3b7021b74bfe474dac3f7a4786491e9b');
+//         const news = await news1.json()
+//         console.log(news);
+//         function setStateFunction(state, props) {
+//             const newState = {title:news};
+//             return newState;
+//           }
+//           this.setState(setStateFunction);
+//     };
+//     getNew();
+// }
+ 
+componentDidMount(){
+    fetch('http://newsapi.org/v2/everything?qInTitle=rain&sources=the-hindu,the-times-of-india,google-news-in&sortBy=publishedAt&apiKey=3b7021b74bfe474dac3f7a4786491e9b')
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+     this.setState({
+         title:data.articles[0].content
+     });
+    });
 }
     render(){
     return( 
-        <div>
+        <div >
     <h1>This is News Page</h1>
     <Link to="/"><button>weather</button></Link>
-    <NewsCard news={this.state.title} />
+    <NewsCard 
+    news={this.state.title} />
+     
     </div>
     );
     }

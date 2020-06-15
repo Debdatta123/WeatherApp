@@ -4,8 +4,10 @@ import News from "./News";
 
 function NewsCard(props){
     return(
-        <div>
+        <div class="col-lg-7">
+        <div className="card ">
             <h1>{props.news}</h1>
+        </div>
         </div>
     )
 }
