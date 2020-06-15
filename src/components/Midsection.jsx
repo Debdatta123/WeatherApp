@@ -5,7 +5,7 @@ function Midsection(props) {
   const imgURL = `owf owf-${props.icon} owf-4x`;
     return(
 <div className="jumbotron card card-image jb">
-<div className="text-white text-center py-5 px-4">
+<div className="text-black text-center py-5 px-4">
   <div>
     <h2 className="card-title h1-responsive pt-3 mb-5 font-bold"><strong>{props.city} , India</strong></h2>
     <p className="para para1">{props.temp_celsius} &deg;C , {props.description}</p>
