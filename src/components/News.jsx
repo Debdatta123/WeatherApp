@@ -30,7 +30,8 @@ componentDidMount(){
     render(){
         let elements = this.state.title.map((e,index)=>{
             return(<div className="container" key={index}>
-            <div className="row justify-content-center"> <NewsCard key={index} title={e.title} image={e.urlToImage} d={e.description}  />
+            <div className="row justify-content-center">
+            <NewsCard key={index} title={e.title} image={e.urlToImage} d={e.description}  />
             </div>
             </div>
         )})
