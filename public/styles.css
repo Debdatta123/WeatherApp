@@ -205,9 +205,38 @@ margin-bottom: 1rem;
   /* background-color: teal; */
 }
 
+.news-container {
+  margin: auto;
+  font-family:  "Varela Round", sans-serif;
+}
 
-
-
-   
+.b2{      
+  font-family:  "Varela Round", sans-serif;
+  display:inline-block;
+  width:220px;
+  height:55px;
+  line-height: 55px;
+  font-size: 17px;
+  letter-spacing:1px;
+  color:white;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-image: linear-gradient(-45deg,rgb(17, 147, 207),#00ffea,rgb(17, 147, 207));
+  border-radius: 45px 0 45px 0;
+  transition: all ease 0.7s;
+  background-size: 400% 400%;
+  background-position: 0 0;
+  float: right;
+  position: relative;
+  bottom:3rem;
+  right:2rem;
+}
+.b2:hover{
+  border-radius: 0 45px 0 45px;
+  background-position: 100% 50%;
+  text-decoration: none;
+  color:white;
+}
    
     

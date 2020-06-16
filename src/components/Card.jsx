@@ -1,5 +1,4 @@
 import React from "react";
-var moment = require('moment');
 
 function Card(props){
   const imgURL = `owf owf-${props.icon1} owf-5x`;
