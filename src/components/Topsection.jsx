@@ -3,7 +3,7 @@ import swal from 'sweetalert';
 import { Link } from "react-router-dom";
 function Topsection(props) {
   return (
-    <div className="curved">      
+    <div className="curved ">      
       <h1>Welcome to weather app</h1>      
       <p>Find weather of any city in India</p>  
     <div>{props.error? error():null}</div>  

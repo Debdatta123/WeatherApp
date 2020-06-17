@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 function NewsHeading() {
   return (
-    <div className="curved">      
+    <div className="curved new2"> 
+    <div className="new1">  
       <h1>Welcome to weather app</h1>      
       <p>Latest Weather News</p>  
-        <Link to="/" className="b2">Weather</Link>
+        <Link to="/" className="i2 new">Weather</Link>
+        </div>   
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"

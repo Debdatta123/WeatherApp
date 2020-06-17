@@ -238,5 +238,26 @@ margin-bottom: 1rem;
   text-decoration: none;
   color:white;
 }
-   
+
+.new{
+  position: relative;
+  top:8rem;
+  left:0rem;
+  color:white;
+  text-decoration: none;
+}
+
+.new:hover{
+  text-decoration: none; 
+  color:white;
+}
+
+.new1{
+  position: relative;
+  top:2rem; 
+}
+ 
+.new2{
+    background-image: url("bubble.svg");
+}
     
