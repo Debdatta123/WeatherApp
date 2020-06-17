@@ -122,6 +122,12 @@ getWeather=async (e) =>{
   console.log(response);
   console.log(response1);
   if(city){
+    if (response.cod === "404" && response1.cod === "404") {
+   console.log("error hai");
+   this.setState({
+    error:true});
+      }
+      else{
   this.setState({
     city:response.name,
     celsius: this.calCelsius(response.main.temp),
@@ -158,6 +164,7 @@ getWeather=async (e) =>{
     dt5:this.day5(),
   });
   }
+}
   else{
 this.setState({
   error:true})

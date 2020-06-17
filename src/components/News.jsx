@@ -32,6 +32,7 @@ componentDidMount(){
             return(<div className="container" key={index}>
             <div className="row justify-content-center">
             <NewsCard key={index} title={e.title} image={e.urlToImage} d={e.description}  />
+            {/* <NewsCard key={index} title={e.title} image={e.urlToImage} d={e.description}  /> */}
             </div>
             </div>
         )})

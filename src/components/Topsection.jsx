@@ -1,4 +1,5 @@
 import React from "react";
+import swal from 'sweetalert';
 import { Link } from "react-router-dom";
 function Topsection(props) {
   return (
@@ -28,11 +29,11 @@ function Topsection(props) {
 }
 
 function error(){
-  return(
-<div className="alert alert-danger mx-5" role="alert">
-  Please Enter City Correctly !!!
-</div>
-  );
-}
+  swal({title: "City not found", text: "Please enter city correctly !!!", icon: 
+"error"}).then(function(){ 
+   window.location.reload();
+   }
+);
+ }
 
 export default Topsection;
