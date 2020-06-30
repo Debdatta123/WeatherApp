@@ -5,7 +5,7 @@
 
 [![made-wuth-javascript](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)
 
-[![react-js](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://reactjs.org/)
+[![made-with-react.js](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://reactjs.org/)
 
 [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)
 
