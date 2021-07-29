@@ -19,7 +19,7 @@
 
 > Weather App using react.js
 
-> Enter name of respective town pr city
+> Enter name of respective town or city
 
 > View weather news from India 
 
